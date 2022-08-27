@@ -4,6 +4,6 @@ glob2
 spacy
 Flask
 numpy
-opencv-python
+opencv-python-headless
 imutils
 gunicorn

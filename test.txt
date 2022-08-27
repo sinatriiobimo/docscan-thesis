@@ -1,0 +1,10 @@
+pandas
+pytesseract
+glob2
+spacy
+Flask
+numpy
+opencv-python-headless
+imutils
+gunicorn
+scipy

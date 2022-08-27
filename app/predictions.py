@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 
 ### Load NER model
 model_ner = spacy.load('./output/model-best')
-pytesseract.pytesseract.tesseract_cmd =  r'./.apt/usr/share/tesseract-ocr/4.00/tessdata'
+pytesseract.pytesseract.tesseract_cmd =  r'/app/.apt/usr/share/tesseract-ocr/4.00/tessdata' 
 
 
 def cleanText(txt):

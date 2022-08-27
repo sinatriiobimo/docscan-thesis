@@ -4,6 +4,7 @@
 import numpy as np
 import pandas as pd
 import cv2
+import subprocess
 import pytesseract
 from glob import glob
 import spacy
@@ -14,6 +15,7 @@ warnings.filterwarnings('ignore')
 
 ### Load NER model
 model_ner = spacy.load('./output/model-best')
+subprocess.run('chmod +x /app/.apt/usr/bin/tesseract', shell=True)
 
 
 def cleanText(txt):

@@ -14,6 +14,7 @@ warnings.filterwarnings('ignore')
 
 ### Load NER model
 model_ner = spacy.load('./output/model-best')
+pytesseract.pytesseract.tesseract_cmd =  r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 def cleanText(txt):

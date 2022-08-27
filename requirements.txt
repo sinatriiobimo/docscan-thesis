@@ -1,0 +1,8 @@
+pandas
+pytesseract
+glob2
+spacy
+Flask
+numpy
+opencv-python
+imutils

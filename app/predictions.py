@@ -77,6 +77,7 @@ grp_gen = groupgen()
 
 def getPredictions(image):
     # extract data using Pytesseract 
+    pytesseract.pytesseract.tesseract_cmd =  r'/app/.apt/usr/bin/tesseract'
     tessData = pytesseract.image_to_data(image)
     # convert into dataframe
     tessList = list(map(lambda x:x.split('\t'), tessData.split('\n')))

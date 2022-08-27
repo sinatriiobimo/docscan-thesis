@@ -4,7 +4,6 @@
 import numpy as np
 import pandas as pd
 import cv2
-import subprocess
 import pytesseract
 from glob import glob
 import spacy
@@ -15,7 +14,6 @@ warnings.filterwarnings('ignore')
 
 ### Load NER model
 model_ner = spacy.load('./output/model-best')
-subprocess.run('chmod +x /app/.apt/usr/bin/tesseract', shell=True)
 
 
 def cleanText(txt):
@@ -79,7 +77,6 @@ grp_gen = groupgen()
 
 def getPredictions(image):
     # extract data using Pytesseract 
-    pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     tessData = pytesseract.image_to_data(image)
     # convert into dataframe
     tessList = list(map(lambda x:x.split('\t'), tessData.split('\n')))

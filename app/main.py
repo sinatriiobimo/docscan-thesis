@@ -1,3 +1,4 @@
+#!/bin/sh
 from flask import Flask, request
 from flask import render_template
 from app import settings
